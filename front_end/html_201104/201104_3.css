@@ -1,0 +1,15 @@
+h1{
+    font-size: 1px;
+    color : #ff0000;
+    border : solid 4px #ff88ff;
+    /* dotted, dashed, solid, double, hidden, groove, ridge, inset, outset, none */
+}
+p{
+    font-size : 20px;
+    font-weight : bold;
+    color : #ff8f00;
+}
+body{
+    background-color : #8f8f8f;
+    color : #00ff11;
+}

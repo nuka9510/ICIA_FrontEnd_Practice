@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blockTest{
+            background-color: #00ffff;
+        }
+        #t1{
+            background-color: #ff00ff;
+            width: 80%;
+        }
+        #a1{
+            background-color: #ffff00;
+        }
+        span{
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+    <title>201104_16</title>
+</head>
+<body>
+    <h1>블록(block) 요소와 인라인(inline)요소의 기본원리와 규칙</h1>
+    <p>블록라인(block-line)은 기본적으로 줄바꿈이 일어나는 형태<br/>
+        영역의 너비가 상위 영역의 전체 너비만큼 되는 형태<br/>
+        블록라인(block-line) 요소 : h#태그, p태그, div태그 등이 있다.
+
+        <h2 class="blockTest">블록(block) 요소</h2>
+        <p class="blockTest">p태그는 블록 형태입니다.</p>
+        <div class="blockTest">div태그는 블록 형태</div>
+    </p><hr/>
+
+    <h2>인라인(inline) 요소</h2>
+    <p>인라인(inline) 요소는 블록요소와 반대,<br/>
+        줄바꿈이 일어나지 않는다.<br/>
+        인라인(inline)형태 요소들 : a태그, img태그, span태그, em, strong태그 등
+        <span>이것은 span태그 입니다.</span>
+        <p id="t1">이것은 <span>p태그 안에 span태그</span> 입니다.</p>
+        <a href="#" id="a1">a태그도</a> 인라인 요소
+    </p>
+    <hr/>
+    <h1>블록(block) 요소와 인라인(inline) 요소의 규칙</h1>
+    <ul type="square">
+        <li>대부분의 요소는 같은 형태의 다른 요소를 안에 포함할 수 있습니다. <br/>
+        (블록 요소 안에 블록 요소, 인라인 요소 안에 인라인 요소)</li>
+        <li>대부분의 블록 요소는 다른 인라인 요소도 안에 포함할 수 있습니다.</li>
+        <li>하지만, 인라인 요소는 블록 요소를 포함 할 수 없습니다.</li>
+    </ul>
+</body>
+</html>
