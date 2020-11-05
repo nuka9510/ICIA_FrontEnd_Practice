@@ -1,0 +1,18 @@
+tr {
+    padding: 3px;
+}
+
+td {
+    width: 100px;
+}
+input{
+    background-color: lightgrey;
+}
+
+input:focus{
+    background-color: white;
+}
+
+input:hover{
+    background-color: whitesmoke;
+}

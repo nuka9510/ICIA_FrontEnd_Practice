@@ -1,0 +1,16 @@
+ul,
+ol{
+    color: orange;
+}
+/* style적용 우선순위 in_tag > id > class > out_tag */
+ul>li{
+    color: powderblue;
+}
+
+.ol1 li{
+    color: rosybrown;
+}
+
+#ol2 li{
+    color: slategray;
+}
