@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        caption{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        table,tr,th,td{
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+        table{
+            margin: auto;
+            width: 700px;
+        }
+        tr,
+        th,
+        td{
+            text-align: center;
+            width: 20%;
+            height: 30px;
+        }
+        th{
+            font-size: 18px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+    <title>201105_5</title>
+</head>
+<body>
+    <table>
+        <caption>■현재 상영중인 영화정보</caption>
+        <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="4">영화정보</th>
+        </tr>
+        <tr>
+            <th>영화 제목</th>
+            <th>세부 정보</th>
+            <th>등급</th>
+            <th>상여 시간</th>
+        </tr>
+        <tr>
+            <td rowspan="3"><img src="알라딘.jpg" alt="알라딘 포스터"></td>
+            <td rowspan="3">알라딘</td>
+            <td>모험, 가족, 판타지, 뮤지컬, 멜로/로맨스 </td>
+            <td rowspan="3">전체 관람가</td>
+            <td rowspan="3">128분</td>
+        </tr>
+        <tr>
+            <td>미국</td>
+        </tr>
+        <tr>
+            <td>2019.05.23개봉</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><img src="기생충.jpg" alt="기생충 포스터"></td>
+            <td rowspan="3">기생충</td>
+            <td>드라마</td>
+            <td rowspan="3">15세 관람가</td>
+            <td rowspan="3">131분</td>
+        </tr>
+        <tr>
+            <td>한국</td>
+        </tr>
+        <tr>
+            <td>2019.05.30개봉</td>
+        </tr>
+        <tr>
+            <th>출처</th>
+            <th colspan="4"><a href="https://movie.naver.com/movie/running/current.nhn?order=reserve" target="_blank">네이버 영화정보</a></th>
+        </tr>
+    </table>
+</body>
+</html>
