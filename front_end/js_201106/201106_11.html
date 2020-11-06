@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201106_11</title>
+</head>
+<body>
+    <input type="text" id="season1">
+    <input type="button" value="입력" onclick="input1()">
+</body>
+<script>
+    var mid = 25;
+    var high = 50;
+    var low = 1;
+    var current = 13;
+    var found = -1;
+
+    if(current<mid){
+        mid = (current-low)/2;
+    }
+    console.log("mid = " + mid);
+
+    if(current<mid){
+        mid = (currnet-low)/2;
+    }else if(current>mid){
+        mid = (current+high)/2;
+    }else{
+        found = current;
+    }
+    console.log("mid = " + mid);
+    console.log("found = " + found);
+
+    var season = "2";
+    console.log("season = " + season);
+
+    function input1(){
+        season = document.getElementById("season1").value;
+        console.log("input season = " + season);
+
+        switch(season){
+            case "1":
+                document.write("봄"); 
+                break;
+            case "2": 
+                document.write("여름");
+                break;
+            case "3": 
+                document.write("가을");
+                break;
+            case "4": 
+                document.write("겨울");
+                break;
+            default : 
+                document.write("다시입력해주세요!");
+                break;
+        }
+    }
+</script>
+</html>

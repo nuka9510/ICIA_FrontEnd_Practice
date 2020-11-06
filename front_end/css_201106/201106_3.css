@@ -1,0 +1,23 @@
+body{
+    color: lightcoral;
+}
+
+h1{
+    color: lightgreen;
+}
+
+h2{
+    color: lightsalmon;
+}
+
+p{
+    color: mediumorchid;
+}
+
+.ex{
+    color: lightseagreen;
+}
+
+p.ex{
+    color: mediumpurple;
+}

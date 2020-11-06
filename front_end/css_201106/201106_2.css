@@ -1,0 +1,18 @@
+a:link{
+    color: peru;
+    text-decoration: none;
+}
+
+a:visited{
+    color: cornflowerblue;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active{
+    color: firebrick;
+    text-decoration: none;
+}

@@ -1,0 +1,56 @@
+li{
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /* float: left를 사용하면 li사이에 margin이 생기지 않는다. */
+    float: left;
+    /* display: inline-block을 사용하면 block과 block사이에 margin이 생긴다. */
+    /* display: inline-block; */
+    list-style: none;
+    /* box-sizing: border-box을 사용하면 block의 사이즈를 border까지 포함하여 지정하게 된다. */
+    box-sizing: border-box;
+    border: 2px solid tomato;
+}
+
+ul{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 98%;
+    /* float: left를 사용하면 ul영역 안에 있던 li들이 떠오르게 되며 ul의 영역이 그로인해 생긴 빈공간을 내용이 없다고 인식하여
+    ul의 공간이 없어진것 처럼 보여지게 된다.
+    
+    하지만 ul의 영역은 li들이 float하기 전에 생성되어있던 공간으로 잡혀있기 때문에 overflow: hidden을 사용하여
+    ul영역 바깥으로 나온 내용들을 숨기기 위하여 영역을 확인하는 과정에서 ul의 영역이 float된 li들을 다시 인식하게 되어
+    없어진것 처럼 보였던 영역을 다시 보여주게 된다. */
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+div{
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.img1{
+    float: right;
+}
+
+#parent{
+    border: 3px double lightcoral;
+}
+
+.child1{
+    border: 1px solid turquoise;
+    height: 100px;
+    background-color: wheat;
+    float: left;
+}
+
+.child2{
+    border: 1px solid turquoise;
+    height: 100px;
+    background-color: wheat;
+    clear: both;
+    margin-left: 10px;
+}

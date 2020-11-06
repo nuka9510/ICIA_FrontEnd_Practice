@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201106_10</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /* 
+    1. 연산자의 종류
+        +, -, *, /, %
+        ++, --
+
+    2. 자바스크립트에 내장된 함수
+        Math.sqrt(z) : z에 대한 루트값
+        Math.abs(y-x) : y에서 x를 뺀 값을 대한 절대값
+        z.toFixed(2) : z를 소숫점 2자리까지만 표시
+        parseInt(y) : y를 소숫점을 버리고 정수로 출력
+
+    3. 삼항연산자
+        (조건식) ? 참 : 거짓;
+    */
+
+    var x = 3;
+    var y = 1.5;
+    var z = x * y;
+
+    console.log("x = " + x);
+    console.log("y = " + y);
+    console.log("z = " + z);
+
+    console.log("5%3 = " + 5 % 3);
+    console.log("parseInt(y) = " + parseInt(y));
+    console.log("Math.sqrt(z) = " + Math.sqrt(z));
+    console.log("Math.abs(y-x) = " + Math.abs(y - x));
+    console.log("z.toFixed(2) = " + z.toFixed(2));
+    console.log("z.toFixed(0) = " + z.toFixed(0));
+    console.log("y.toFixed(0) = " + y.toFixed(0));
+
+    var now = new Date();
+    console.log(now);
+    document.write(now);
+
+    document.write("<br/>");
+
+    // function [name](){}은 java의 method 처럼 사용할수 있다.
+    function formatDate(date){
+        var year = date.getFullYear();
+        var month = ((date.getMonth()+1)<10?"0"+(date.getMonth()+1):(date.getMonth()+1));
+        var day = (date.getDate()<10)?"0"+date.getDate():date.getDate();
+        var hour24 = date.getHours();
+        var hour12 = (hour24%12<12)?hour24%12:12;
+        var hour = (hour12<10)?"0"+hour12:hour12;
+        var minute = (date.getMinutes()<10)?"0"+date.getMinutes():date.getMinutes();
+        var second = (date.getSeconds()<10)?"0"+date.getSeconds():date.getSeconds();
+
+        return year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second
+    }
+    document.write(formatDate(now));
+
+    document.write("<br/>");
+
+    var ampm = (now.getHours() < 12) ? "오전" : "오후";
+    var hour = (now.getHours()/12)?now.getHours()-12:now.getHours();
+    document.write("지금은 " + ampm + " " + ((hour<10)?"0"+hour:hour) + "시 " + ((now.getMinutes()<10)?"0"+now.getMinutes():now.getMinutes()) + "분 입니다.");
+</script>
+
+</html>
