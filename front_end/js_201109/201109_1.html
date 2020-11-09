@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201109_1</title>
+</head>
+<body>
+    <input type="text" id="season1">
+    <input type="button" value="입력" onclick="input_1()">
+</body>
+<script>
+    function input_1(){
+        var season = document.getElementById("season1").value;
+
+        switch(season){
+            case "1": 
+                document.write("봄");
+                break;
+            case "2": 
+                document.write("여름");
+                break;
+            case "3": 
+                document.write("가을");
+                break;
+            case "4": 
+                document.write("겨울");
+                break;
+            default : 
+                document.write("다시 입력해주세요!");
+                break;
+        }
+    }
+
+</script>
+</html>

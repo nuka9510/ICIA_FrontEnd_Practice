@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201109_9</title>
+</head>
+<body>
+    <h2>재귀호출 : function안에서 자신을 다시 호출하는 것</h2>
+    <!-- 4 x 3 x 2 x 1 = 4! -->
+    <!-- factorial -->
+
+    <fieldset>
+        <legend>factorial function</legend>
+        <input type="text" id="fact">
+        <input type="button" value="factorial!" onclick="factmethod(document.getElementById('fact'), document.getElementById('img1'))">
+        <h2>입력한 값 : <span id="result1"></span></h2>
+        <h2>결과 값 : <span id="result2"></span></h2>
+        <img src="" alt="" id="img1" width="300px">
+    </fieldset>
+</body>
+<script>
+    var result = 1;
+
+    function factmethod(num, img){
+        var i = parseInt(num.value);
+        document.getElementById("result1").innerHTML = num.value;
+        document.getElementById("result2").innerHTML = factorial(i);
+        result = 1;
+        num.value = "";
+        num.focus();
+
+        img1(img);
+    }
+
+    function factorial(num){
+        if(num == 0){
+            return 0;
+        }else if(num == 1){
+            return result;
+        }else{
+            result *= num;
+            num--;
+        }
+        return factorial(num);
+    }
+
+    function img1(img){
+        img.src="IMG_1557.jpg";
+    }
+
+</script>
+</html>

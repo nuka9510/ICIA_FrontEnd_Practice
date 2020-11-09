@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201109_7</title>
+</head>
+<body onload="localVar1(), localVar2()"> <!--onload는 script태그를 먼저 실행하고 실행된다.-->
+    
+</body>
+<script>
+    var field = 100;
+
+    function localVar1(){
+        var local = 200;
+
+        console.log("field : " + field);
+        console.log("local : " + local);
+    }
+
+    console.log("field : " + field);
+    console.log("local : " + local); // 변수local은 function localVar1()에서 선언된 변수이기 때문에 function localVar1()의 밖에서는 사용할 수 없다.
+
+    function localVar2(local){
+        local = 300;
+
+        console.log("field : " + field);
+        console.log("local : " + local);
+    }
+
+    console.log("local : " + local); // 변수local은 function localVar2()에서 선언된 변수이기 때문에 function localVar2()의 밖에서는 사용할 수 없다.
+</script>
+</html>

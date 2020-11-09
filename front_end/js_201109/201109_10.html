@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201109_10</title>
+</head>
+<body>
+    <fieldset>
+        <legend>2의 n승</legend>
+        <input type="text" id="pot" placeholder="0이상의 숫자를 입력하세요">
+        <input type="button" value="powerOfTwo" onclick="potmethod(document.getElementById('pot'))">
+        <h2>입력한 값 : <span id="result1"></span></h2>
+        <h2>결과 값 : <span id="result2"></span></h2>
+    </fieldset>
+</body>
+<script>
+    function potmethod(num){
+        var i = parseInt(num.value);
+        
+        document.getElementById("result1").innerHTML = num.value;
+        document.getElementById("result2").innerHTML = powerOfTwo(i);
+
+        num.value = "";
+        num.focus();
+    }
+
+    function powerOfTwo(num){
+        if(num == 0){
+            return 1;
+        }else{
+            return 2*powerOfTwo(num-1);
+        }
+    }
+</script>
+</html>
