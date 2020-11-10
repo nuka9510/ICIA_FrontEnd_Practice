@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            margin: auto;
+        }
+
+        caption {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        body {
+            text-align: center;
+        }
+        div{
+            border: 2px solid black;
+            margin: auto;
+            width: 40%;
+        }
+    </style>
+    <title>201110_3</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <caption>Account Service</caption>
+            <tr>
+                <td><input type="button" value="입금" style="width: 80px; height: 30px;" onclick="account.deposit()"></td>
+                <td><input type="button" value="출금" style="width: 80px; height: 30px;" onclick="account.withdraw()">
+                </td>
+                <td><input type="button" value="잔액조회" style="width: 80px; height: 30px;"
+                        onclick="account.totalbalance()"></td>
+            </tr>
+        </table>
+        <h3><span id="amount"></span></h3>
+    </div>
+</body>
+<script>
+    var account = {};
+    account.balance = 0;
+
+    account.deposit = function () {
+        document.getElementById("amount").innerHTML = "<input type='text' id='deposit' placeholder='금액'>" + " " +
+            "<input type='button' value='입금' style='width: 80px; height: 30px;' onclick='depositAmount()'>";
+        document.getElementById("deposit").focus();
+    }
+
+    function depositAmount() {
+        var amount = document.getElementById("deposit").value;
+        account.balance += parseInt(amount);
+        document.getElementById("amount").innerHTML = "잔액 : " + account.balance + "원";
+    }
+
+    account.withdraw = function () {
+        document.getElementById("amount").innerHTML = "<input type='text' id='withdraw' placeholder='금액'>" + " " +
+            "<input type='button' value='출금' style='width: 80px; height: 30px;' onclick='withdrawAmount()'>";
+        document.getElementById("withdraw").focus();
+    }
+
+    function withdrawAmount() {
+        var amount = document.getElementById("withdraw").value;
+        if (account.balance >= parseInt(amount)) {
+            account.balance -= parseInt(amount);
+            document.getElementById("amount").innerHTML = "잔액 : " + account.balance + "원";
+        } else {
+            alert("잔액이 부족합니다.");
+            document.getElementById("amount").innerHTML = "현재 잔액 : " + account.balance + "원";
+        }
+    }
+
+    account.totalbalance = function () {
+        document.getElementById("amount").innerHTML = "현재 잔액 : " + this.balance + "원";
+    }
+
+</script>
+
+</html>

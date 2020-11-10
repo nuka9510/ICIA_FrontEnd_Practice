@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201110_5</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button onclick="arrPush()">push</button>
+    <button onclick="arrPop()">pop</button>
+    <button onclick="arrUnshift()">unshift</button>
+    <button onclick="arrShift()">shift</button>
+    <button onclick="arrSplice(document.getElementById('txt'))">Splice</button>
+</body>
+<script>
+    var arr = [];
+    
+    for(var i=0;i<5;i++){
+        arr[i] = i+1;
+    }
+
+    function arrPush(){
+        arr.push(arr.length+1);
+        console.log("push : " + arr);
+    }
+    function arrPop(){
+        arr.pop();
+        console.log("pop : " + arr);
+    }
+    function arrUnshift(){
+        arr.unshift(arr.length+1);
+        console.log("unshift : " + arr);
+    }
+    function arrShift(){
+        arr.shift();
+        console.log("shift : " + arr);
+    }
+    function arrSplice(data){
+        console.log(arr.indexOf(parseInt(data.value)));
+        if(arr.indexOf(parseInt(data.value))>-1){
+            arr.splice(arr.indexOf(parseInt(data.value)),1);
+        }else{
+            alert("입력한 값이 없습니다.");
+        }
+        console.log(arr);
+    }
+</script>
+</html>

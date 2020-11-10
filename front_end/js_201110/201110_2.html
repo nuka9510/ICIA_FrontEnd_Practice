@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201110_2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var account = {};
+
+    account.balance = 0;
+    
+    account.deposit = function(amount){
+        this.balance += amount;
+    }
+
+    account.withdraw = function(amount){
+        if(this.balance>=amount){
+            this.balance -= amount;
+        }else{
+            console.log("잔액 부족");
+        }
+    }
+
+    account.toString = function(){
+        return "balance : " + this.balance;
+    }
+
+    account.balance = 50000;
+    account.deposit(10000);
+
+    console.log(account.toString());
+
+    account.withdraw(100000);
+    account.withdraw(30000);
+
+    console.log(account.toString());
+</script>
+</html>
