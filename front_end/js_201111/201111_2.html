@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201111_2</title>
+</head>
+<body>
+    <input type="text" id="txt1">
+    <h3 id="out1"></h3>
+    <input type="text" id="txt2" onfocus="onfcsin(document.getElementById('out2'))" onfocusout="onfcsout(document.getElementById('out2'))" onclick="oncl(document.getElementById('out2'))">
+    <h3 id="out2"></h3>
+</body>
+<script>
+    document.getElementById("txt1").addEventListener("focusin",fcsin);
+    document.getElementById("txt1").addEventListener("focusout",fcsout);
+    document.getElementById("txt1").addEventListener("click",click);
+    function fcsin(){
+        document.getElementById("out1").innerHTML = "Focus In";
+    }
+    function fcsout(){
+        document.getElementById("out1").innerHTML = "Focus out";
+    }
+    function click(){
+        document.getElementById("out1").innerHTML = "click";
+    }
+    function onfcsin(out){
+        out.innerHTML = "On Focus";
+    }
+    function onfcsout(out){
+        out.innerHTML = "On Focus Out";
+    }
+    function oncl(out){
+        out.innerHTML = "On Click";
+    }
+</script>
+</html>

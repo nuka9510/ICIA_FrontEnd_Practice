@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrapper{
+            width: 250px;
+            height: 250px;
+            background-color: paleturquoise;
+            text-align: center;
+            line-height: 250px;
+        }
+    </style>
+    <title>201111_1</title>
+</head>
+<body><!--  onload="alert('로딩 완료')" -->
+    <div id="wrapper" onmouseover="mouseEvent('over', document.getElementById('wrapper'))" onmouseout="mouseEvent('out', document.getElementById('wrapper'))">
+    </div>
+    <fieldset>
+        <input type="button" value="date"  onclick="date(document.getElementById('date'))">
+        <h3 id="date"></h3>
+    </fieldset>
+    <fieldset>
+        <input type="text" id="key1" onkeydown="keyud('down', document.getElementById('typing'), document.getElementById('key1'))" onkeyup="keyud('up', document.getElementById('typing'), document.getElementById('key1'))">
+        <h3 id="typing">표시될 부분</h3>
+    </fieldset>
+    <fieldset>
+        <select id="select1" onchange="sel(document.getElementById('select1'), document.getElementById('company'))">
+            <option>--select--</option>
+            <option>ASUS</option>
+            <option>GIGABYTE</option>
+            <option>MSI</option>
+            <option>ASROCK</option>
+        </select>
+        <h3 id="company">표시될 부분</h3>
+    </fieldset>
+</body>
+<script>
+    function mouseEvent(evt, out){
+        if(evt=="over"){
+            console.log("over");
+            out.innerHTML = "mouse over";
+        }
+        if(evt=="out"){
+            console.log("out");
+            out.innerHTML = "mouse out";
+        }
+    }
+    function date(out){
+        var date = new Date();
+       out.innerHTML = date;
+    }
+    function keyud(evt, typing, msg){
+        if(evt=="down"){
+            console.log("down");
+            typing.innerHTML = "key down";
+        }
+        if(evt=="up"){
+            console.log("up");
+            typing.innerHTML = msg.value;
+        }
+    }
+    function sel(sel, out){
+        out.innerHTML = sel.value;
+    }
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+        }
+    </style>
+    <title>201111_3</title>
+</head>
+<body>
+    <div id="eventZone1"></div>
+    <h2>mouse position: <span id="pos1"></span></h2>
+    <h2>mouse position: <span id="pos2"></span></h2>
+    
+    <div id="eventZone2" onclick="click2(document.getElementById('eventZone2'))" ondblclick="dblclick2(document.getElementById('eventZone2'))" onmouseover="mouseenter2(document.getElementById('eventZone2'))" onmouseout="mouseout2(document.getElementById('eventZone2'))" oncontextmenu="context2()" onmousemove="mMove2(document.getElementById('pos3'), document.getElementById('pos4'), window.event)"></div>
+    <h2>mouse position: <span id="pos3"></span></h2>
+    <h2>mouse position: <span id="pos4"></span></h2>
+</body>
+<script>
+    document.getElementById("eventZone1").addEventListener("click",click1);
+    document.getElementById("eventZone1").addEventListener("dblclick",dblclick1);
+    document.getElementById("eventZone1").addEventListener("mouseenter",mouseenter1);
+    document.getElementById("eventZone1").addEventListener("mouseout",mouseout1);
+    document.getElementById("eventZone1").addEventListener("contextmenu",context1);
+    
+    function click1(){
+        document.getElementById("eventZone1").innerHTML = "Click";
+        document.getElementById("eventZone1").style.backgroundColor = "paleturquoise";
+    }
+    function dblclick1(){
+        document.getElementById("eventZone1").innerHTML = "Dblclick";
+        document.getElementById("eventZone1").style.backgroundColor = "palegoldenrod";
+    }
+    function mouseenter1(){
+        document.getElementById("eventZone1").innerHTML = "Mouseenter";
+        document.getElementById("eventZone1").style.backgroundColor = "palevioletred";
+    }
+    function mouseout1(){
+        document.getElementById("eventZone1").innerHTML = "Mouseout";
+        document.getElementById("eventZone1").style.backgroundColor = "lightgray";
+    }
+    function context1(){
+        alert("contextmenu");
+    }
+
+    function click2(out){
+        out.innerHTML = "ON Click";
+        out.style.backgroundColor = "paleturquoise";
+    }
+    function dblclick2(out){
+        out.innerHTML = "On Dblclick";
+        out.style.backgroundColor = "palegoldenrod";
+    }
+    function mouseenter2(out){
+        out.innerHTML = "On Mouse Over";
+        out.style.backgroundColor = "palevioletred";
+    }
+    function mouseout2(out){
+        out.innerHTML = "On Mouse Out";
+        out.style.backgroundColor = "lightgray";
+    }
+    function context2(){
+        alert("On Contextmenu");
+    }
+
+
+    document.getElementById("eventZone1").addEventListener("mousemove",mMove1);
+    function mMove1(move){
+        document.getElementById("pos1").innerHTML = "X : " + move.clientX + "Y : " + move.clientY;
+        document.getElementById("pos2").innerHTML = "X : " + move.screenX + "Y : " + move.screenY;
+    }
+
+    function mMove2(out1, out2, move){
+        out1.innerHTML = "X : " + move.clientX + "Y : " + move.clientY;
+        out2.innerHTML = "X : " + move.screenX + "Y : " + move.screenY;
+    }
+</script>
+</html>

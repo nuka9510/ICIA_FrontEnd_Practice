@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .num {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 2px;
+            border: 1px solid black;
+            float: left;
+        }
+
+        #btn {
+            display: block;
+            clear: both;
+        }
+    </style>
+    <title>201111_4</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>랜덤번호 생성기</legend>
+        <div class="num"></div>
+        <div class="num"></div>
+        <div class="num"></div>
+        <div class="num"></div>
+        <div class="num"></div>
+        <div class="num"></div>
+        <button id="btn" onclick="createnum(document.getElementsByClassName('num'))">번호
+            생성</button>
+    </fieldset>
+</body>
+<script>
+    var lotto = [0, 0, 0, 0, 0, 0];
+    var i = 0;
+
+    function createnum(num) {
+        if (i > 5) {
+            alert("더이상 넣을 수 없습니다.");
+        } else {
+            lotto[i] = randomnum(1, 45);
+            num[i].innerHTML = lotto[i];
+            i++;
+        }
+    }
+    function randomnum(num1, num2) {
+        var rnd = Math.floor(Math.random() * num2 + num1);
+
+        for(var j in lotto){
+            if(lotto[j]==rnd){
+                return randomnum(num1, num2);
+            }
+        }
+
+        return rnd;
+    }
+</script>
+
+</html>

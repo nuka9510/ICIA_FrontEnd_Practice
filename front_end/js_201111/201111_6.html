@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201111_6</title>
+</head>
+<body>
+    <h2>브라우저 사이즈</h2>
+    <h2>모니터 사이즈</h2>
+    <h2>모니터 작업표시줄 제외 사이즈</h2>
+</body>
+<script>
+    var h2 = document.getElementsByTagName("h2");
+
+    h2[0].innerHTML = "브라우저 사이즈<br/>width : " + window.innerWidth + "<br/>height : " + window.innerHeight;
+    h2[1].innerHTML = "모니터 사이즈<br/>width : " + screen.width + "<br/>height : " + screen.height;
+    h2[2].innerHTML = "모니터 작업표시줄 제외 사이즈<br/>width : " + screen.availWidth + "<br/>height : " + screen.availHeight;
+</script>
+</html>

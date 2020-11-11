@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201111_7</title>
+</head>
+<body>
+    <button onclick="interval(document.getElementById('out'), this)" id="start">start</button>
+    <button onclick="stop(document.getElementById('out'), document.getElementById('start'))">stop</button>
+    <button onclick="setTime()">3second</button>
+    <h1 id="out">0</h1>
+</body>
+<script>
+    var time;
+    function interval(out, start){
+        var second = 1;
+        start.onclick = "";
+        time = setInterval(function(){
+            out.innerHTML = second;
+            second++;
+        },1000);
+    }
+    function stop(out, start){
+        start.onclick = "interval(document.getElementById('out'), this)"
+        clearInterval(time);
+        out.innerHTML = 0;
+    }
+    function setTime(){
+        alert("3초 뒤에 이동합니다.");
+        setTimeout(function(){
+            location.href = "https://www.naver.com";
+        },3000);
+    }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #out{
+            color: red;
+        }
+    </style>
+    <title>201111_8</title>
+</head>
+<body onload="interval(document.getElementById('out')), setTime()">
+    <h1> <span id="out">5</span> 초 후 페이지가 이동 됩니다.</h1>
+</body>
+<script>
+    var time;
+    function interval(out){
+        var second = 4;
+        time = setInterval(function(){
+            out.innerHTML = second;
+            second--;
+        },1000);
+    }
+    function setTime(){
+        time = setTimeout(function(){
+            alert("페이지가 이동 됩니다.");
+            location.href = "https://www.naver.com"
+        },5000);
+    }
+</script>
+</html>
