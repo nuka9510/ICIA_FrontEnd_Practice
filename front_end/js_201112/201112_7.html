@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        tfoot tr td {
+            text-align: center;
+        }
+    </style>
+    <title>201112_7</title>
+</head>
+
+<body>
+    <form action="201112_6.html" method="POST">
+        <table>
+            <caption>회원가입</caption>
+            <tbody>
+                <tr>
+                    <th>아이디 :</th>
+                    <td><input type="text" name="userId"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 :</th>
+                    <td><input type="password" name="userPw" id="userPw"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인 :</th>
+                    <td>
+                        <input type="password" name="checkPw" onkeyup="checkPwd(document.getElementById('userPw'), this, document.getElementById('msg'))">
+                        <span id="msg"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이름 :</th>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <th>전화번호 :</th>
+                    <td><input type="text" placeholder="'-'없이 입력" name="userPhone"></td>
+                </tr>
+                <tr>
+                    <th>주소 :</th>
+                    <td><input type="text" name="userAddr"></td>
+                </tr>
+                <tr>
+                    <th>생년월일 :</th>
+                    <td><input type="date" name="userBirth"></td>
+                </tr>
+                <tr>
+                    <th>성별 :</th>
+                    <td>남자 <input type="radio" name="gender"> / 여자 <input type="radio" name="gender"></td>
+                </tr>
+                <tr>
+                    <th>취미 :</th>
+                    <td>
+                        Java <input type="checkbox" name="hobby">
+                        DB <input type="checkbox" name="hobby">
+                        HTML <input type="checkbox" name="hobby">
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일 :</th>
+                    <td><input type="email" name="userMail"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="회원가입">
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+<script>
+    function checkPwd(userPw, checkPw, msg) {
+        console.log(userPw.value);
+        console.log(checkPw.value);
+        if (userPw.value == checkPw.value) {
+            msg.innerHTML = "일치";
+        } else {
+            msg.innerHTML = "불일치";
+        }
+    }
+</script>
+
+</html>

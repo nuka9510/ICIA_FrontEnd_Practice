@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #div1{
+            width: 350px;
+            height: 350px;
+            border: 2px solid hotpink;
+        }
+        #div1 div{
+            padding: 10px;
+            border: 1px solid green;
+            background-color: lightgreen;
+        }
+        #div1>#box1{
+            padding: 10px;
+            border: 1px solid red;
+            background-color: lightpink;
+            position: static;
+            /* position: static은 해당 태그의 위치를 그 태그가 원래 생성된 위치에 고정하는 속성이다.
+                그러므로 top, left, right, bottom과 같은 position을 설정해주는 style이 적용되지 않는다.
+                또한 태그들이 생성되었을 때의 position의 default값 이기도 하다. */
+            top: 20px;
+            left: 20px;
+        }
+        #div1>#box2{
+            padding: 10px;
+            border: 1px solid blue;
+            background-color: lightblue;
+            position: relative;
+            /* position: relative는 해당 태그가 생성된 위치를 기준으로 position을 변경할 수 있도록하는 속성이다. */
+            top: 20px;
+            left: 20px;
+        }
+        #div1>#box3{
+            padding: 10px;
+            border: 1px solid orange;
+            background-color: salmon;
+            position: absolute;
+            /* position: absolute는 해당 태그가 생성된 부모 태그의 영역을 기준으로 위치를 설정할 수 있도록 하는 속성이다.
+                또한 태그의 size가 태그 안의 내용에 맞게 변경된다. */
+            top: 20px;
+            left: 20px;
+        }
+        #div1>#box4{
+            padding: 10px;
+            border: 1px solid purple;
+            background-color: plum;
+            position: fixed;
+            /* position: fixed는 해당 태그를 브라우저의 영역을 기준으로 위치를 설정할 수 있도록 하는 속성이며 스크롤이 되어도
+                설정한 위치에 고정이 되도록 한다.
+                또한 태그의 size가 태그 안의 내용에 맞게 변경된다. */
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+    <title>201112_2</title>
+</head>
+<body>
+    <div id="div1">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+    </div>
+</body>
+</html>

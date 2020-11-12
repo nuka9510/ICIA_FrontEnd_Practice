@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201112_8</title>
+</head>
+<body onload="document.getElementById('txt').focus()">
+<h2>당신이 입력한 값 : <span id="out"></span></h2>
+<input type="text" id="txt" onkeyup="textout(document.getElementById('out'), this, document.getElementById('info'))"><span id="info">(0자 입력)</span>
+</body>
+<script>
+    function textout(out, txt, info){        
+        if(txt.value.length>=5&&txt.value.length<=9){
+            info.style.color = "orange";
+        }else if(txt.value.length==10){
+            info.style.color = "red";
+        }else if(txt.value.length>10){
+            txt.value = txt.value.substring(0, 10);
+            alert("더이상 입력할 수 없습니다.");
+        }else {
+            info.style.color = "black";
+        }
+        out.innerHTML = txt.value;
+        info.innerHTML = "(" + txt.value.length + "자 입력)";
+    }
+</script>
+</html>

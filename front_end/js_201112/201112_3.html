@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+    <title>201112_3</title>
+</head>
+
+<body>
+    <h1 id="color">COLOR</h1>
+    <button id="btn" onclick="colorChange(document.getElementById('color'))">색상 변경</button>
+</body>
+<script>
+    function colorChange(color) {
+        var change = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+        setInterval(function () {
+            color.style.color = change[Math.floor(Math.random() * change.length)];
+        }, 1000);
+    }
+</script>
+
+</html>

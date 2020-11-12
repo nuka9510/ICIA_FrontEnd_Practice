@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201112_4</title>
+</head>
+
+<body>
+    <button id="bnt1" onclick="button1(document.getElementById('elem'))">텍스트표시(innerHTML)</button>
+    <button id="bnt1" onclick="button2()">텍스트표시(write)</button>
+    <button id="bnt1" onclick="button3(document.getElementById('image'))">이미지 변경</button>
+    <h1 id="elem"></h1>
+    <img src="../html_201104/IMG_0433.jpg" alt="" id="image" width="200px">
+</body>
+<script>
+    // function button1(elem) {
+    //     elem.innerHTML = "innerHTML";
+    // }
+    var button1 = function (elem) {
+        elem.innerHTML = "innerHTML";
+    }
+    function button2() {
+        document.write("write");
+    }
+    function button3(image) {
+        if (image.src == "http://127.0.0.1:5500/html_201104/IMG_0433.jpg") {
+            image.src = "../html_201104/IMG_1172.jpg";
+        } else {
+            image.src = "../html_201104/IMG_0433.jpg";
+        }
+    }
+
+    console.log(button1);
+    button1 = null;
+    console.log(button1);
+    button1 = function (elem) {
+        elem.innerHTML = "innerHTML";
+    }
+    console.log(button1);
+
+</script>
+
+</html>

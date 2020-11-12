@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201112_6</title>
+</head>
+
+<body>
+    <button onclick="popup()">경고창</button>
+    <button onclick="conf()">확인창</button>
+    <button onclick="promp()">입력창</button>
+</body>
+<script>
+    function popup() {
+        alert("경고창");
+    }
+    function conf() {
+        var con = confirm("confirm");
+        console.log(typeof con);
+        if (con) {
+            alert("Y");
+        } else {
+            alert("N");
+        }
+    }
+    function promp() {
+        var stname = prompt("Name");
+        console.log(stname);
+        if (stname == "") {
+            promp();
+        }else if(stname == null) {
+
+        }else {
+            alert(stname);
+        }
+    }
+</script>
+
+</html>

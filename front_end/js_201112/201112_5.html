@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>201112_5</title>
+</head>
+<body>
+    <button onclick="goNaver()">Naver</button>
+    <button onclick="before()">before</button>
+    <button onclick="after()">after</button>
+</body>
+<script>
+    function goNaver(){
+        window.location.href = "https://www.naver.com";
+    }
+    function before(){
+        window.history.back();
+    }
+    function after(){
+        window.history.forward();
+    }
+</script>
+</html>
